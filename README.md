@@ -36,7 +36,7 @@
 
 
 **Country display metrics webapp** is a React project developed as part of Microverse React solo project activity.
-The project is developed using React and Redux toolkit. Data is obtained from API. We used react-bootstrap for styling.
+The project is developed using React and Redux toolkit. Data is obtained from API. I used react-bootstrap for styling.
 
 ## 🛠 Built With <a name="built-with"></a>
 
