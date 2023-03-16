@@ -1,12 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const initialState = [];
 
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
-  const response = await axios.get('https://restcountries.com/v3.1/all');
-  return response.data.map((country) => ({
+  const response = await fetch('https://restcountries.com/v3.1/all');
+  const data = await response.json();
+  return data.map((country) => ({
     name: country.name.common,
     population: country.population,
     capital: country.capital,
