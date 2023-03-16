@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { IoChevronBack } from 'react-icons/io5';
-import styles from '../styles/Navbar.module.css';
+import { FiArrowLeft } from 'react-icons/fi';
+import styles from '../styles/styles.module.css';
 
 const Navbar = () => {
   const location = useLocation();
@@ -9,8 +9,9 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <NavLink to="/" className={styles.link}>
-        {location.pathname !== '/' && <IoChevronBack className={styles.back} />}
+        {location.pathname !== '/' && <FiArrowLeft className={styles.back_btn} />}
       </NavLink>
+
       <Outlet />
     </div>
   );

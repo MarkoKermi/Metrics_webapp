@@ -1,0 +1,88 @@
+/* Navbar section */
+
+.back_btn {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+/* Details section */
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: #439ab2;
+  min-height: 100vh;
+  color: white;
+}
+
+.detailName {
+  font-weight: bold;
+}
+
+.detailValue {
+  font-size: 1.5rem;
+}
+
+.timezone::after {
+  content: ', ';
+}
+
+.timezone:last-child::after {
+  content: '';
+}
+
+.flag {
+  width: 30%;
+}
+
+/* Navbar section */
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  list-style-type: none;
+  padding: 0;
+}
+
+.main_title {
+  text-align: center;
+}
+
+.dropdown_menu {
+  margin: 0 2rem;
+  border: solid 0.2rem grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+}
+
+/* First page */
+
+.country {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 200px;
+  height: 100%;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #8227d7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .countries {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
